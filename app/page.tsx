@@ -1,15 +1,7 @@
-import { getUsers } from '@/lib/db';
 import { UsersTable } from './users-table';
 import { Search } from './search';
 
-interface User {
-  id: number;
-  name: string | null;
-  username: string | null;
-  email: string | null;
-}
-
-const users: User[] = [
+const users = [
   { id: 1, name: 'gholi', email: 'gholi@hashem.com', username: 'gholi' },
   { id: 2, name: 'gholi', email: 'gholi@hashem.com', username: 'gholi' },
   { id: 3, name: 'gholi', email: 'gholi@hashem.com', username: 'gholi' },
@@ -21,7 +13,7 @@ const users: User[] = [
   { id: 9, name: 'gholi', email: 'gholi@hashem.com', username: 'gholi' }
 ];
 
-export default async function IndexPage({
+export default function IndexPage({
   searchParams
 }: {
   searchParams: { q: string; offset: string };
