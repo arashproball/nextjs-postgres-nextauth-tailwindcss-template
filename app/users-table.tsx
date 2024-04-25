@@ -37,9 +37,9 @@ export function UsersTable({
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="max-w-[150px]">Name</TableHead>
-              <TableHead className="hidden md:table-cell">Email</TableHead>
-              <TableHead className="hidden md:table-cell">Username</TableHead>
+              <TableHead className="max-w-[150px]">نام</TableHead>
+              <TableHead className="hidden md:table-cell">توضیحات</TableHead>
+              <TableHead className="hidden md:table-cell">دسته</TableHead>
               <TableHead></TableHead>
             </TableRow>
           </TableHeader>
@@ -71,8 +71,11 @@ function UserRow({ user }: { user: User }) {
       <TableCell className="font-medium">{user.name}</TableCell>
       <TableCell className="hidden md:table-cell">{user.email}</TableCell>
       <TableCell>{user.username}</TableCell>
-      <TableCell>
-        <Button className="w-full" size="sm" variant="outline" disabled>
+      <TableCell className="flex justify-between">
+        <Button className="" size="sm" variant="outline" disabled>
+          Edit
+        </Button>
+        <Button className="" size="sm" variant="outline" disabled>
           Delete
         </Button>
       </TableCell>
